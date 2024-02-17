@@ -1,0 +1,103 @@
+html{
+  background-color: #124E78;
+}
+
+div.game-cell{
+  background-color: #F0F0C9;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+div.game-board{
+  width: 300px;
+  display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+      grid-template-rows: repeat(3, 1fr);    /* Three rows with equal height */
+}
+
+header{
+  background-color: #F2BB05;
+  padding: 10px;
+}
+
+div.board-container{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.red-cross {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+}
+
+.green-circle{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+}
+
+.red-cross::before,
+.red-cross::after {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 100%;
+  background-color: #D74E09;
+  left: 45px;
+}
+
+.red-cross::before {
+  transform: rotate(45deg);
+}
+
+.red-cross::after {
+  transform: rotate(-45deg);
+}
+
+/* .green-circle::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* background-color:  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6E0E0A;
+  font-size: 24px;
+  z-index: 1; 
+} */
+
+
+.green-circle::before{
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: #6E0E0A;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+
+}
+
+.green-circle::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #F0F0C9;
+  left: 25px;
+  top: 25px;
+  border-radius: 50%;
+
+}
+
+.disabled{
+  pointer-events: none;
+}
